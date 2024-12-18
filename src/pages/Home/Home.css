@@ -1,0 +1,10 @@
+.jero {
+    display: grid;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+.jero > * {
+    grid-column-start: 1;
+    grid-row-start: 1;
+}

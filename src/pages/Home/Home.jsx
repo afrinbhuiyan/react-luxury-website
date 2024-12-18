@@ -1,3 +1,4 @@
+import './Home.css'
 import Navbar from "../../Shared/NavBar/Navbar";
 import { SlLocationPin } from "react-icons/sl";
 import { FiPhone } from "react-icons/fi";
@@ -12,14 +13,6 @@ import 'swiper/css/navigation';
 
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 
-import slider1 from '../../assets/slider1.jpg';
-import slider2 from '../../assets/slider2.jpg';
-import slider3 from '../../assets/slider3.jpg';
-import slider4 from '../../assets/slider4.jpg';
-import slider5 from '../../assets/slider5.jpg';
-import slider6 from '../../assets/slider6.jpg';
-import slider7 from '../../assets/sliderr.jpg';
-
 const Home = () => {
     return (
         <div>
@@ -31,54 +24,199 @@ const Home = () => {
             </div>
             <div className="mx-40">
                 <Navbar></Navbar>
-                </div>
-            <div className="mt-8 flex">
-                
-                <h1>This is home</h1>
-                <div className="my-10">
+            </div>
+            <div className="">
+                <div className="">
                     <Swiper
                         // effect={'coverflow'}
-                        // grabCursor={true}
-                        // centeredSlides={true}
-                        // loop={true}
+                        grabCursor={true}
+                        centeredSlides={true}
+                        loop={true}
                         slidesPerView={'auto'}
-                        // coverflowEffect={
-                        //     {
-                        //         rotate: 0,
-                        //         stretch: 0,
-                        //         depth: 100,
-                        //         modifier: 2.5,
-                        //     }
-                        // }
-                        pagination={{el:'.swiper-pagination', clickable:true,  }}
+                        coverflowEffect={
+                            {
+                                rotate: 0,
+                                stretch: 0,
+                                depth: 100,
+                                modifier: 2.5,
+                            }
+                        }
+                        pagination={{ el: '.swiper-pagination', clickable: true, }}
                         navigation={{
-                            nextEl:'.swiper-button-next',
-                            // prevEl: '.swiper-button-prev',
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
                             clickable: true
                         }}
                         modules={[EffectCoverflow, Pagination, Navigation]}
-                        className="swiper_container w-[50%]"
+                        className="swiper_container h-[730px] mb-10"
                     >
                         <SwiperSlide>
-                            <img src={slider1} alt="slide_image" />
+                            <div
+                                className="jero w-[100%] h-[700px]"
+                                style={{
+                                    backgroundImage: "url(https://i.ibb.co.com/stQbhyk/lycs-architecture-k-Udb-EEMc-Rw-E-unsplash.jpghttps://i.ibb.co.com/stQbhyk/lycs-architecture-k-Udb-EEMc-Rw-E-unsplash.jpg)",
+                                }}>
+                                <div className="hero-overlay bg-opacity-60"></div>
+                                <div className="lg:my-auto lg:mx-48 text-white lg:flex lg:justify-between">
+                                    <div className="">
+                                        <p className='text-[22px] font-bold mb-2'>LUXURY HOUSES</p>
+                                        <h1 className="mb-5 text-7xl font-bold border-l-4 border-l-[#ffffff4d] pl-6">Luxury <br /> Recidence here</h1>
+                                        <p className="text-[22px] mb-5">
+                                            Whether youre looking to sell or let youre home or want to buy <br /> or rent a home. we really are the people for you to come to.
+                                        </p>
+                                        <button className="py-3 px-9 bg-[#ffffff4d] hover:bg-[#5493f1] ">Get Started</button>
+                                    </div>
+                                    <div className='bg-[#1111117a] text-center my-auto pt-10'>
+                                        <h3 className='text-[20px] mb-3'>SALE PRICE</h3>
+                                        <h1 className='text-4xl font-bold mb-8'>$ 250,199</h1>
+                                        <button className='py-3 px-24 bg-[#5493f1] hover:bg-[#1c1a5a]'>MORE DETAIL</button>
+                                    </div>
+                                </div>
+                            </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img src={slider2} alt="slide_image" />
+                            <div
+                                className="jero w-[100%] h-[700px]"
+                                style={{
+                                    backgroundImage: "url(https://i.ibb.co.com/d2MpdvH/frames-for-your-heart-vb-SRUr-Nm3-Ik-unsplash.jpg)",
+                                }}>
+                                <div className="hero-overlay bg-opacity-60"></div>
+                                <div className="lg:my-auto lg:mx-48 text-white lg:flex lg:justify-between">
+                                    <div className="">
+                                        <p className='text-[22px] font-bold mb-2'>LUXURY HOUSES</p>
+                                        <h1 className="mb-5 text-7xl font-bold border-l-4 border-l-[#ffffff4d] pl-6">Luxury <br /> Recidence here</h1>
+                                        <p className="text-[22px] mb-5">
+                                            Whether youre looking to sell or let youre home or want to buy <br /> or rent a home. we really are the people for you to come to.
+                                        </p>
+                                        <button className="py-3 px-9 bg-[#ffffff4d] hover:bg-[#5493f1] ">Get Started</button>
+                                    </div>
+                                    <div className='bg-[#1111117a] text-center my-auto pt-10'>
+                                        <h3 className='text-[20px] mb-3'>SALE PRICE</h3>
+                                        <h1 className='text-4xl font-bold mb-8'>$ 270,199</h1>
+                                        <button className='py-3 px-24 bg-[#5493f1] hover:bg-[#1c1a5a]'>MORE DETAIL</button>
+                                    </div>
+                                </div>
+                            </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img src={slider3} alt="slide_image" />
+                            <div
+                                className="jero w-[100%] h-[700px]"
+                                style={{
+                                    backgroundImage: "url(https://i.ibb.co.com/jHGdSt8/walter-sturn-fol-Cc8-Q8k-unsplash.jpg)",
+                                }}>
+                                <div className="hero-overlay bg-opacity-60"></div>
+                                <div className="lg:my-auto lg:mx-48 text-white lg:flex lg:justify-between">
+                                    <div className="">
+                                        <p className='text-[22px] font-bold mb-2'>LUXURY HOUSES</p>
+                                        <h1 className="mb-5 text-7xl font-bold border-l-4 border-l-[#ffffff4d] pl-6">Luxury <br /> Recidence here</h1>
+                                        <p className="text-[22px] mb-5">
+                                            Whether youre looking to sell or let youre home or want to buy <br /> or rent a home. we really are the people for you to come to.
+                                        </p>
+                                        <button className="py-3 px-9 bg-[#ffffff4d] hover:bg-[#5493f1] ">Get Started</button>
+                                    </div>
+                                    <div className='bg-[#1111117a] text-center my-auto pt-10'>
+                                        <h3 className='text-[20px] mb-3'>SALE PRICE</h3>
+                                        <h1 className='text-4xl font-bold mb-8'>$ 300,199</h1>
+                                        <button className='py-3 px-24 bg-[#5493f1] hover:bg-[#1c1a5a]'>MORE DETAIL</button>
+                                    </div>
+                                </div>
+                            </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img src={slider4} alt="slide_image" />
+                        <div
+                                className="jero w-[100%] h-[700px]"
+                                style={{
+                                    backgroundImage: "url(https://i.ibb.co.com/stQbhyk/lycs-architecture-k-Udb-EEMc-Rw-E-unsplash.jpghttps://i.ibb.co.com/stQbhyk/lycs-architecture-k-Udb-EEMc-Rw-E-unsplash.jpg)",
+                                }}>
+                                <div className="hero-overlay bg-opacity-60"></div>
+                                <div className="lg:my-auto lg:mx-48 text-white lg:flex lg:justify-between">
+                                    <div className="">
+                                        <p className='text-[22px] font-bold mb-2'>LUXURY HOUSES</p>
+                                        <h1 className="mb-5 text-7xl font-bold border-l-4 border-l-[#ffffff4d] pl-6">Luxury <br /> Recidence here</h1>
+                                        <p className="text-[22px] mb-5">
+                                            Whether youre looking to sell or let youre home or want to buy <br /> or rent a home. we really are the people for you to come to.
+                                        </p>
+                                        <button className="py-3 px-9 bg-[#ffffff4d] hover:bg-[#5493f1] ">Get Started</button>
+                                    </div>
+                                    <div className='bg-[#1111117a] text-center my-auto pt-10'>
+                                        <h3 className='text-[20px] mb-3'>SALE PRICE</h3>
+                                        <h1 className='text-4xl font-bold mb-8'>$ 250,199</h1>
+                                        <button className='py-3 px-24 bg-[#5493f1] hover:bg-[#1c1a5a]'>MORE DETAIL</button>
+                                    </div>
+                                </div>
+                            </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img src={slider5} alt="slide_image" />
+                        <div
+                                className="jero w-[100%] h-[700px]"
+                                style={{
+                                    backgroundImage: "url(https://i.ibb.co.com/d2MpdvH/frames-for-your-heart-vb-SRUr-Nm3-Ik-unsplash.jpg)",
+                                }}>
+                                <div className="hero-overlay bg-opacity-60"></div>
+                                <div className="lg:my-auto lg:mx-48 text-white lg:flex lg:justify-between">
+                                    <div className="">
+                                        <p className='text-[22px] font-bold mb-2'>LUXURY HOUSES</p>
+                                        <h1 className="mb-5 text-7xl font-bold border-l-4 border-l-[#ffffff4d] pl-6">Luxury <br /> Recidence here</h1>
+                                        <p className="text-[22px] mb-5">
+                                            Whether youre looking to sell or let youre home or want to buy <br /> or rent a home. we really are the people for you to come to.
+                                        </p>
+                                        <button className="py-3 px-9 bg-[#ffffff4d] hover:bg-[#5493f1] ">Get Started</button>
+                                    </div>
+                                    <div className='bg-[#1111117a] text-center my-auto pt-10'>
+                                        <h3 className='text-[20px] mb-3'>SALE PRICE</h3>
+                                        <h1 className='text-4xl font-bold mb-8'>$ 250,199</h1>
+                                        <button className='py-3 px-24 bg-[#5493f1] hover:bg-[#1c1a5a]'>MORE DETAIL</button>
+                                    </div>
+                                </div>
+                            </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img src={slider6} alt="slide_image" />
+                        <div
+                                className="jero w-[100%] h-[700px]"
+                                style={{
+                                    backgroundImage: "url(https://i.ibb.co.com/jHGdSt8/walter-sturn-fol-Cc8-Q8k-unsplash.jpg)",
+                                }}>
+                                <div className="hero-overlay bg-opacity-60"></div>
+                                <div className="lg:my-auto lg:mx-48 text-white lg:flex lg:justify-between">
+                                    <div className="">
+                                        <p className='text-[22px] font-bold mb-2'>LUXURY HOUSES</p>
+                                        <h1 className="mb-5 text-7xl font-bold border-l-4 border-l-[#ffffff4d] pl-6">Luxury <br /> Recidence here</h1>
+                                        <p className="text-[22px] mb-5">
+                                            Whether youre looking to sell or let youre home or want to buy <br /> or rent a home. we really are the people for you to come to.
+                                        </p>
+                                        <button className="py-3 px-9 bg-[#ffffff4d] hover:bg-[#5493f1] ">Get Started</button>
+                                    </div>
+                                    <div className='bg-[#1111117a] text-center my-auto pt-10'>
+                                        <h3 className='text-[20px] mb-3'>SALE PRICE</h3>
+                                        <h1 className='text-4xl font-bold mb-8'>$ 250,199</h1>
+                                        <button className='py-3 px-24 bg-[#5493f1] hover:bg-[#1c1a5a]'>MORE DETAIL</button>
+                                    </div>
+                                </div>
+                            </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img src={slider7} alt="slide_image" />
+                        <div
+                                className="jero w-[100%] h-[700px]"
+                                style={{
+                                    backgroundImage: "url(https://i.ibb.co.com/d2MpdvH/frames-for-your-heart-vb-SRUr-Nm3-Ik-unsplash.jpg)",
+                                }}>
+                                <div className="hero-overlay bg-opacity-60"></div>
+                                <div className="lg:my-auto lg:mx-48 text-white lg:flex lg:justify-between">
+                                    <div className="">
+                                        <p className='text-[22px] font-bold mb-2'>LUXURY HOUSES</p>
+                                        <h1 className="mb-5 text-7xl font-bold border-l-4 border-l-[#ffffff4d] pl-6">Luxury <br /> Recidence here</h1>
+                                        <p className="text-[22px] mb-5">
+                                            Whether youre looking to sell or let youre home or want to buy <br /> or rent a home. we really are the people for you to come to.
+                                        </p>
+                                        <button className="py-3 px-9 bg-[#ffffff4d] hover:bg-[#5493f1] ">Get Started</button>
+                                    </div>
+                                    <div className='bg-[#1111117a] text-center my-auto pt-10'>
+                                        <h3 className='text-[20px] mb-3'>SALE PRICE</h3>
+                                        <h1 className='text-4xl font-bold mb-8'>$ 250,199</h1>
+                                        <button className='py-3 px-24 bg-[#5493f1] hover:bg-[#1c1a5a]'>MORE DETAIL</button>
+                                    </div>
+                                </div>
+                            </div>
                         </SwiperSlide>
 
                         <div className="slider-controler">
@@ -88,11 +226,11 @@ const Home = () => {
                             <div className="swiper-button-next slider-arrow " >
                                 <ion-icon name="arrow-forward-outline" ></ion-icon>
                             </div>
-                              <div className="swiper-pagination"></div>
+                            <div className="swiper-pagination"></div>
                         </div>
 
                     </Swiper>
-                        
+
                 </div>
             </div>
             <Footer></Footer>
