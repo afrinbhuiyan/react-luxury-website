@@ -1,13 +1,25 @@
 import { NavLink } from "react-router";
 import './Navbar.css'
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProviders";
 
 const Navbar = () => {
 
+    const {user, logOut} = useContext(AuthContext)
+
+    const handleSignOut = () => {
+         logOut()
+         .then()
+         .catch(error => {
+            console.log(error)
+         })
+    } 
+
     const links = <>
-            <li><NavLink className={'hover:text-[#5493f1] hover:underline'} to={'/'} >Home</NavLink></li>
-            <li><NavLink to={'/login'} >Login</NavLink></li>
-            <li><NavLink to={'/register'} >Register</NavLink></li>
-            <li><NavLink to={'/register'} >Update Profile</NavLink></li>
+        <li><NavLink className={'hover:text-[#5493f1] hover:underline'} to={'/'} >Home</NavLink></li>
+        {/* <li><NavLink to={'/login'} >Login</NavLink></li> */}
+        {/* <li><NavLink to={'/register'} >Register</NavLink></li> */}
+        <li><NavLink to={'/register'} >Update Profile</NavLink></li>
     </>
 
     return (
@@ -36,8 +48,8 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <img className="border p-2 border-[#1111113f] " width={'80px'} src="https://i.ibb.co.com/wJnBvBN/deal-8858003.png" alt="" />
-                    <p className="ml-4"><span className="text-5xl pt-serif-caption-regular-italic mb-10 text-[#67abeb]" >Luxery</span> <br /> 
-                    <span className="pt-serif-caption-regular-italic text-[#1c1a5a] " >Estate Rental </span> </p>
+                    <p className="ml-4"><span className="text-5xl pt-serif-caption-regular-italic mb-10 text-[#67abeb]" >Luxery</span> <br />
+                        <span className="pt-serif-caption-regular-italic text-[#1c1a5a] " >Estate Rental </span> </p>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="flex gap-4 px-1">
@@ -45,9 +57,17 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className=" navbar-end ibm-plex-sans-medium">
-                    <nav className="button">
-                    <a>Login</a>
-                    </nav>
+                    
+                    {
+                            user ? 
+                            <nav className="button">
+                            <a onClick={handleSignOut} >Sign out</a>
+                            </nav>
+                            : 
+                            <nav className="button">
+                            <NavLink to={'/login'}>Login</NavLink>
+                            </nav>
+                        }
                 </div>
             </div>
         </div>

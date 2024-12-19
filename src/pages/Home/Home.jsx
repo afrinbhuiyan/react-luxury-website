@@ -1,9 +1,6 @@
 import './Home.css'
 import Navbar from "../../Shared/NavBar/Navbar";
-import { SlLocationPin } from "react-icons/sl";
-import { FiPhone } from "react-icons/fi";
-import { LuMail } from "react-icons/lu";
-import { IoIosSearch } from "react-icons/io";
+
 import Footer from "../../Footer/Footer";
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css';
@@ -12,16 +9,16 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
+import { useLoaderData } from 'react-router';
+import Properties from '../Properties/Properties';
+import Header from '../../Shared/Header/Header';
 
 const Home = () => {
+    const data = useLoaderData([])
+    console.log(data)
     return (
         <div>
-            <div className="navbar flex justify-center bg-[#1111] border-b border-[#1111111c]">
-                <p className="border-r border-[#1111113b] px-6 text-[#1c1a5a]"> <SlLocationPin className="mr-3" ></SlLocationPin> Road - Dhaka </p>
-                <p className="border-r border-[#1111113b] px-6 text-[#1c1a5a]"> <FiPhone className="mr-3" ></FiPhone> 04546789990 </p>
-                <p className="border-r border-[#1111113b] px-6 text-[#1c1a5a]"> <LuMail className="mr-3" ></LuMail> Luxury@Gmail.com </p>
-                <p className="px-6"> <IoIosSearch className="text-2xl text-[#1c1a5a]" ></IoIosSearch> </p>
-            </div>
+            <Header></Header>
             <div className="mx-40">
                 <Navbar></Navbar>
             </div>
@@ -123,7 +120,7 @@ const Home = () => {
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                        <div
+                            <div
                                 className="jero w-[100%] h-[700px]"
                                 style={{
                                     backgroundImage: "url(https://i.ibb.co.com/stQbhyk/lycs-architecture-k-Udb-EEMc-Rw-E-unsplash.jpghttps://i.ibb.co.com/stQbhyk/lycs-architecture-k-Udb-EEMc-Rw-E-unsplash.jpg)",
@@ -147,7 +144,7 @@ const Home = () => {
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                        <div
+                            <div
                                 className="jero w-[100%] h-[700px]"
                                 style={{
                                     backgroundImage: "url(https://i.ibb.co.com/d2MpdvH/frames-for-your-heart-vb-SRUr-Nm3-Ik-unsplash.jpg)",
@@ -171,7 +168,7 @@ const Home = () => {
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                        <div
+                            <div
                                 className="jero w-[100%] h-[700px]"
                                 style={{
                                     backgroundImage: "url(https://i.ibb.co.com/jHGdSt8/walter-sturn-fol-Cc8-Q8k-unsplash.jpg)",
@@ -195,7 +192,7 @@ const Home = () => {
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                        <div
+                            <div
                                 className="jero w-[100%] h-[700px]"
                                 style={{
                                     backgroundImage: "url(https://i.ibb.co.com/d2MpdvH/frames-for-your-heart-vb-SRUr-Nm3-Ik-unsplash.jpg)",
@@ -231,6 +228,17 @@ const Home = () => {
 
                     </Swiper>
 
+                </div>
+                <div>
+                    <div className='mb-20'>
+                        <h5 className='text-[#67abeb] font-bold text-center ' >Our Featured Properties For Sale and Rent</h5>
+                        <h1 className='text-4xl font-bold text-center '>Properties <span className='border-b-4 pb-5 border-blue-500'>Fo</span><span className='border-b-4 pb-5 border-b-[#111] '>r S</span>ale & Rent</h1>
+                        <div className='grid grid-cols-3 mx-64 '>
+                            {
+                                data.map(properties => <Properties key={properties.id} properties={properties} ></Properties>)
+                            }
+                        </div>
+                    </div>
                 </div>
             </div>
             <Footer></Footer>
